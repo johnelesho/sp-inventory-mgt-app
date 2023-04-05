@@ -23,7 +23,7 @@ public class StaffService implements AppService<StaffRequest, StaffDto>{
     @Override
     public Page<StaffDto> findAll(Pageable page) {
 
-        Page<StaffDto> all = staffRepository.findAll(page).map(mapToDto);
+        Page<StaffDto> all = staffRepository.findAll(page);
 
         return all;
 
